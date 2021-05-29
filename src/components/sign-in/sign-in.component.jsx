@@ -37,7 +37,7 @@ handleChange = event => {
                         type="email" 
                         value={this.state.email} 
                         handleChange={this.handleChange} 
-                        label="email"
+                        label="Email"
                         required />
                   
                     <FormInput 
@@ -45,7 +45,7 @@ handleChange = event => {
                             type="password" 
                             value={this.state.password} 
                             handleChange={this.handleChange} 
-                            label="password"
+                            label="Password"
                             required />
                     <div className="buttons">
 
