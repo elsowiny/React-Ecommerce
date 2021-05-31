@@ -1,9 +1,10 @@
-
 import React from 'react';
+import storage from 'redux-persist/lib/storage';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+import { persistor } from './redux/store';
 import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
@@ -36,8 +37,18 @@ class App extends React.Component {
         });
       }
 
+    
       setCurrentUser(userAuth);
-    });
+    }
+    
+      
+    );
+
+
+      if(!this.user){
+        console.log("signed out")
+        
+    };
   }
 
   componentWillUnmount() {
