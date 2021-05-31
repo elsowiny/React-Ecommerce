@@ -24,6 +24,7 @@ class App extends React.Component {
 
   componentDidMount() {
     const { setCurrentUser } = this.props;
+    const { user } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -45,10 +46,9 @@ class App extends React.Component {
     );
 
 
-      if(!this.user){
-        console.log("signed out")
-        
-    };
+     
+
+    
   }
 
   componentWillUnmount() {
